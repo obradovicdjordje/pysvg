@@ -12,16 +12,18 @@ class SVG():
         for obj in self.objects:
             stt += obj.draw()
         nested_svg="""
-        <svg width="{0}" height="{1}">
-          <defs>
-            <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-              <path d="M0,0 L0,6 L9,3 z" fill="#000" />
-            </marker>
-          </defs>
-          <svg x="0">
-            {2}
-          </svg>
-        </svg>""".format(self.width, self.height, stt)
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns="http://www.w3.org/2000/svg" width="{0}" height="{1}" version="1.0">       
+    <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+    </marker>
+    </defs>
+    <svg x="0">
+    {2}
+    </svg>
+</svg>""".format(self.width, self.height, stt)
         return nested_svg
 
 class Line():
