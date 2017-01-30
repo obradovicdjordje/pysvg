@@ -11,9 +11,7 @@ class SVG():
         stt = ""
         for obj in self.objects:
             stt += obj.draw()
-        nested_svg="""
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+        nested_svg="""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg id="svg2" xmlns="http://www.w3.org/2000/svg" width="{0}" height="{1}" version="1.0">       
     <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
