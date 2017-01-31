@@ -1,4 +1,4 @@
-from svg import SVG, Ellipse, Rectangle, Line, Text, Box, Connection
+from pysvg.svg import SVG, Ellipse, Rectangle, Line, Text, Box, Connection
 
 svg = SVG(500, 300)
 '''
