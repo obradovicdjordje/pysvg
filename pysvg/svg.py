@@ -14,7 +14,7 @@ class SVG():
         nested_svg="""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg id="svg2" xmlns="http://www.w3.org/2000/svg" width="{0}" height="{1}" version="1.0">       
     <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <marker id="arrow" markerWidth="5" markerHeight="5" refX="4" refY="2" orient="auto" markerUnits="strokeWidth">
         <path d="M0,0 L0,6 L9,3 z" fill="#000" />
     </marker>
     </defs>
@@ -190,3 +190,17 @@ class Connection():
     def draw(self):
         ret = """<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" style="{4}" marker-end="url(#arrow)"/>""".format(self.x1, self.y1, self.x2, self.y2, self.style)
         return ret
+
+class Point():
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def center_point(self):
+        return self.x, self.y
+
+    def border_point(self, xt, yt):
+        return self.x, self.y
+
+    def draw(self):
+        return ""
