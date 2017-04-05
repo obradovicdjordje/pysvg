@@ -1,10 +1,10 @@
 from pysvg.svg import SVG, Ellipse, Rectangle, Line, Text, Box, Connection, Point
 
-nn_model = [3, 10, 5, 7, 1]
+nn_model = [10, 1]
 nr = 10
 
-width = 15*nr*4+2*50
-height = (10-1)*3*nr+2*50
+width = 15*nr*1+2*50
+height = (10-2)*3*nr+2*50
 svg = SVG(width, height)
 
 neuron_style = "fill:#aaffaa;stroke:#000;stroke-width:2px;fill-opacity:0.5"
